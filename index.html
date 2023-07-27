@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+   
+    <link href="style.css" rel="stylesheet"stylesheet"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>The Spline Check</title>
+</head>
+<body>
+    <section>
+        <h1>What is this ?</h1>
+        <p>Just shut up!</p>
+
+    </section>
+
+  
+    <iframe src='https://my.spline.design/untitled-dfb023658f9cf2057085a5d0bb9fd111/' frameborder='0' width='100%' height='100%'></iframe>
+
+    <script>
+        const headLine = new SplitType('h1');
+     const myText2 = new SplitType('p',{charClass:'char2'})
+
+    var tl = gsap.timeline({defaults: {ease: "Expo.easeInOut"}})
+
+        tl.from('.char', {
+            y: -100,
+            stagger: 0.05,
+            delay: 1
+        })
+        .from('.char2', {
+            y: -100,
+            stagger: 0.05,
+            duration: .6
+        }, "-=1.2")
+        .to('h1,p', {
+            y: 130,
+            delay: .4,
+            duration: 1.4
+        })
+    </script>
+  
+    
+</body>
+</html>
